@@ -1,0 +1,12 @@
+<div class="container flex">
+<h1>Bejelentkezés</h1>
+<p *ngIf="this.isError" style="color: red; text-align: center;">Hibás felhasználónév/jelszó!</p>
+    <div class="formdiv">
+      <label>Felhasználónév</label>
+      <input type="text" [(ngModel)]="this.actual.username" placeholder="Felhasználónév...">
+      <label>Jelszó</label>
+      <input [(ngModel)]="this.actual.password" type="password" placeholder="Jelszó...">
+      <button (click)="this.login()"
+       type="button">Bejelentkezés</button>
+    </div>
+  </div>

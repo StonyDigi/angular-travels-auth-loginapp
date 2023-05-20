@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TravelService } from './travel.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'loginapp2';
+  title = 'travelapp';
+  constructor(public service: TravelService){
+    
+  }
 }

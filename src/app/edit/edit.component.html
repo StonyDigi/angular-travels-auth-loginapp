@@ -1,0 +1,11 @@
+<h1>Módosítsd a hirdetésed</h1>
+
+<div class="formdiv">
+    <label>Utazás célja</label>
+    <input type="text" [(ngModel)]="this.actual.destination">
+    <label>Utazás ára</label>
+    <input type="number" [(ngModel)]="this.actual.price">
+    <label>Utazás dátuma</label>
+    <input type="date" [(ngModel)]="this.actual.date">
+    <button (click)="this.service.update(this.actual)" >Hirdetés módosítása</button>
+</div>

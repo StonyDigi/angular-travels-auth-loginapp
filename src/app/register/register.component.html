@@ -1,0 +1,15 @@
+<h1>Regisztrálj be!</h1>
+
+<div class="formdiv">
+    <label>Vezetéknév</label>
+    <input type="text" [(ngModel)]="this.actual.firstName">
+    <label>Keresztnév</label>
+    <input type="text" [(ngModel)]="this.actual.lastName">
+    <label>Felhasználónév</label>
+    <input type="text" [(ngModel)]="this.actual.userName">
+    <label>Email cím</label>
+    <input type="email" [(ngModel)]="this.actual.email">
+    <label>Jelszó</label>
+    <input type="password" [(ngModel)]="this.actual.password">
+    <button (click)="this.service.register(this.actual)">Regisztráció</button>
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Utazások</h1>
+  <table class="table table-striped">
+        <tr>
+          <th scope="col">Uticél</th>
+          <th scope="col">Ár: (Ft)</th>
+          <th scope="col">Dátum</th>
+          <th scope="col">Feladó</th>
+        </tr>
+        <tr *ngFor="let x of this.service.myTravels">
+          <td>{{x.destination}}</td>
+          <td>{{x.price}}</td>
+          <td>{{x.date}}</td>
+          <td>
+            {{x.owner?.firstName}} {{x.owner?.lastName}}
+            {{x.owner?.email}}
+          </td>
+          <td>
+            <button  (click)="this.update(x.id)" class="btn btn-warning">Módosítás</button>&nbsp;
+            <button (click)="this.service.delete(x.id)" class="btn btn-danger">Törlés</button>
+          </td>
+          
+        </tr>
+    </table>
+  </div>
